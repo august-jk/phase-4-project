@@ -31,6 +31,8 @@ function LoginForm() {
     }
   
     return(
+        <div>
+            {errors ? errors.map(error => <p>error</p>) : null}
         <Form onSubmit={handleSubmit}>
             <Form.Group className="m-3" controlId="email">
                 <Form.Label >Username:</Form.Label>
@@ -54,6 +56,7 @@ function LoginForm() {
                 Login
             </Button>
         </Form>
+        </div>
     )
 }
 export default LoginForm;
